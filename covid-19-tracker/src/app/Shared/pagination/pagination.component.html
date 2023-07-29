@@ -1,0 +1,7 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" [attr.disabled] = "link.isEnabled? false : true" [ngClass]="link.isActive? 'active': ''" *ngFor="let link of paginationLink" (click)= onPageClick(link) >
+        <a class="page-link">{{link.text}}</a>
+      </li>
+    </ul>
+</nav>

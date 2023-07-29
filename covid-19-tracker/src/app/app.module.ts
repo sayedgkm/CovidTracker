@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
 import { DataService } from './services/data-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginationComponent } from './Shared/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CountriesComponent
+    CountriesComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

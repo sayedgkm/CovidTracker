@@ -1,1 +1,25 @@
-<p>countries works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Country</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">Death</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let countryWiseCovidData of countryWiseCovidDataList; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{countryWiseCovidData.country}}</td>
+        <td>{{countryWiseCovidData.confirmed}}</td>
+        <td>{{countryWiseCovidData.deaths}}</td>
+        <td>{{countryWiseCovidData.recovered}}</td>
+        <td>{{countryWiseCovidData.active}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-pagination *ngIf="numberOfPages > 0" [currentPageIndex]="currentPageIndex" [numberOfPages]="numberOfPages" 
+    (onPageClickEvent) = "changePage($event)"></app-pagination>
